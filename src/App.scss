@@ -1,0 +1,89 @@
+// html, body {margin: 0; height: 100%; overflow: hidden}
+
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20pt;
+}
+
+.wrapper {
+  transition: all ease 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  color: white;
+  font-size: 15pt;
+  transition: all ease 0.5s;
+  & span {
+    text-align: center;
+  }
+}
+
+.connected-message {
+  text-align: center;
+  width: 200px;
+}
+
+.quote {
+  font-family: 'Lora', serif;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: white;
+  opacity: 0.5;
+}
+
+.text {
+  animation: fade-in 1.5s ease;
+}
+
+.connected {
+  transition: all ease 1;
+}
+
+.disconnected {
+  transition: all ease 1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    width: 50%;
+  }
+
+  .connected-message {
+    width: 100%;
+  }
+}
+
